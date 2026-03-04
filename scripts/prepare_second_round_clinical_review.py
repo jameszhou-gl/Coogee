@@ -14,7 +14,7 @@ parser.add_argument('--LOG_DIR', type=str, required=True, help='Path that stores
 args = parser.parse_args()
 
 NUM = 20
-SCORE_THRESHOLD = 8
+SCORE_THRESHOLD = 7
 real_dir = os.path.join(args.LOG_DIR, "final_patient_timelines_for_clinical_review", "real")
 synthetic_dir = os.path.join(args.LOG_DIR, "final_patient_timelines_for_clinical_review", "synthetic_post_processed_icd10cm_1")
 output_dir = os.path.join(args.LOG_DIR, "final_patient_timelines_for_clinical_review", "clinical_review_round2")

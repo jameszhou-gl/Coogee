@@ -111,4 +111,3 @@ for idx, review_file in enumerate(tqdm(review_files, desc="Processing patient fi
 save_results()
 print(f"Realism scores: {realism_scores}")
 
-# python -m scripts.llm_as_a_judge --PATIENT_TIMELINES_DIR output/coogee-final-sanity-check/2025-12-19_10_58_00-rm_know_emb_labtest_w_n_embd_factor/final_patient_timelines/synthetic_post_processed_icd10cm_1
