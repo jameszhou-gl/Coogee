@@ -1,0 +1,3 @@
+[submodule "external/meds_etl"]
+	path = external/meds_etl
+	url = git@github.com:jameszhou-gl/meds_etl.git

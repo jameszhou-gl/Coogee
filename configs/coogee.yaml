@@ -1,0 +1,46 @@
+version: 4.0
+
+concetps:
+  demographics:
+    AGE: true
+    SEX: true
+    RACE: true
+    MARITAL_STATUS: true
+    YEAR: true
+  clinical_codes:
+    ICD10CM: true
+    ICD10PCS: true
+    LAB: true
+    _Q: true
+    ATC: true
+    DEATH: true
+  specials:
+    START_RECORD: true
+    END_RECORD: true
+    START_VISIT: true
+    END_VISIT: true
+  temporal:
+    within_visit:
+      enabled: true
+      gap_threshold_min: 5 # TODO: now we exclude time gaps<5 minutes, reduce this value to see how's the performance
+    between_visits:
+      enabled: true
+      # gap_threshold_hr: 0 # we include all time gaps for between-visits
+
+sequence:
+  packing: dense # concat all patients' sequences into one sequence and separate them by one PADDING token, instead of inserting too many padding tokens to align with max_seq_length
+  max_seq_length: 2048
+
+aux_embeddings:
+  semantic:
+    enabled: true
+    model: emilyalsentzer/Bio_ClinicalBERT
+    dim: 768 # load from ClinicalBERT, should be 768 only
+  hierarchy:
+    enabled: true
+    dim: 384
+
+wandb:
+  project: coogee-final
+huggingface:
+  repo: "jameszhou-gl/coogee"
