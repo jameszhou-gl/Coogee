@@ -145,7 +145,15 @@ python -m evaluation.eval_fidelity_time --LOG_DIR "$LOG_DIR"
 If you find our work useful in your research, please consider citing:
 
 ```tex
-
+@misc{zhou2026statisticalfidelityclinicalconsistency,
+      title={From Statistical Fidelity to Clinical Consistency: Scalable Generation and Auditing of Synthetic Patient Trajectories}, 
+      author={Guanglin Zhou and Armin Catic and Motahare Shabestari and Matthew Young and Chaiquan Li and Katrina Poppe and Sebastiano Barbieri},
+      year={2026},
+      eprint={2603.06720},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2603.06720}, 
+}
 ```
 
 ## License
